@@ -21,3 +21,13 @@ GO
 -- ------------------------------------------------------------------------------------------------
 -- CREACIÓN DE TABLAS 
 -- ------------------------------------------------------------------------------------------------
+
+--Se crea la tabla de Empleados
+CREATE TABLE Usuarios(
+nombre VARCHAR(100) NOT NULL UNIQUE,
+cedula VARCHAR(9) NOT NULL PRIMARY KEY,
+pass VARCHAR(7) NOT NULL CHECK (LEN(pass) = 6),
+--falta el check de la contraseña
+activo BIT NOT NULL DEFAULT 1
+)
+GO
